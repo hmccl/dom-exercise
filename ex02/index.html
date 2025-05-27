@@ -9,6 +9,7 @@
   <meta name="description" content="Exercício do Grupo">
   <link rel="stylesheet" href="../style.css" type="text/css" media="all">
   <link rel="icon" href="../favicon.svg" type="image/svg">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -20,8 +21,33 @@
     <article>
       <section>
         <h3>Questão 2</h3>
-        <p><b>Enunciado</b></p>
-        <p>Resposta</p>
+        <p><b>Crie dois exemplos usando os métodos do objeto document: getElementById() egetElementsByTagName().</b></p>
+        
+        <h4>Usando getElementById()</h4>
+
+        <h5 id="titulo"> Esté é um título que será alterado pelo ID.</h5>
+
+        <p id="paragrafoDescricao"> Este é um parágrafo que será alterado pelo ID.</p>
+
+        <button onclick="alterarTitulo()">Alterar Título por ID</button>
+        <button onclick="alterarParagrafo()">Alterar Parágrafo por ID</button>
+
+        <h4>Usando getElementsByTagName()</h4>
+
+        <p>Este é o primeiro parágrafo genérico.</p>
+        <p>Este é o segundo parágrafo genérico.</p>
+        <p>E este é o terceiro parágrafo genérico.</p>
+
+        <h5>Minha Lista de Tarefas</h5>
+
+        <ul>
+          <li>Comprar pão</li>
+          <li>Estudar JavaScript</li>
+          <li>Passear com o cachorro</li>
+        </ul>
+
+        <button onclick="alterarTodosParagrafos()">Alterar Todos os Parágrafos</button>
+        <button onclick="destacarTodosItensLista()">Destacar Itens da Lista</button>
       </section>
     </article>
   </main>

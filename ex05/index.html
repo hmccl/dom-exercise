@@ -20,8 +20,52 @@
     <article>
       <section>
         <h3>Questão 5</h3>
-        <p><b>Enunciado</b></p>
-        <p>Resposta</p>
+        <p><b>Qual a diferença entre as propriedades textContent, innerText e innerHTML dos elementos HTML? Cite
+            exemplos.</b></p>
+
+        <h4>textContent</h4>
+        <p>Retorna ou define todo o texto dentro de um elemento incluinod o texto oculto por estilos CSS. Não interpreta
+          HTML, apenas manipula texto puro.</p>
+
+        <pre><code>&lt;div id=&quot;exemplo1&quot;&gt;
+    &lt;p&gt;Texto visível&lt;/p&gt;
+    &lt;p style=&quot;display:none;&quot;&gt;Texto oculto&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    var div = document.getElementById(&quot;exemplo1&quot;);
+    console.log(div.textContent); // Exibe &quot;Texto visívelTexto oculto&quot;
+&lt;/script&gt;
+</code></pre>
+
+        <h4>innerText</h4>
+        <p>Retorna ou define o texto vísivel no elemento, respeitando o CSS (ou
+          seja, não inclui elementos ocultos). Também não interpreta HTML.</p>
+
+        <pre><code>&lt;div id=&quot;exemplo2&quot;&gt;
+    &lt;p&gt;Texto visível&lt;/p&gt;
+    &lt;p style=&quot;display:none;&quot;&gt;Texto oculto&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    var div = document.getElementById(&quot;exemplo2&quot;);
+    console.log(div.innerText); // Exibe &quot;Texto visível&quot; (não inclui o oculto)
+&lt;/script&gt;
+</code></pre>
+
+        <h4>innerHTML</h4>
+        <p>Retorna ou define o código HTML interno do elemento. Permite
+          manipular estruturas HTML dentro de um elemento.</p>
+
+        <pre><code>&lt;div id=&quot;exemplo3&quot;&gt;
+    &lt;p&gt;Texto original&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    var div = document.getElementById(&quot;exemplo3&quot;);
+    div.innerHTML = &quot;&lt;strong&gt;Texto em negrito&lt;/strong&gt;&quot;; // Insere HTML
+&lt;/script&gt;
+</code></pre>
       </section>
     </article>
   </main>

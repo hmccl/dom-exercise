@@ -9,6 +9,7 @@
   <meta name="description" content="Exercício do Grupo">
   <link rel="stylesheet" href="../style.css" type="text/css" media="all">
   <link rel="icon" href="../favicon.svg" type="image/svg">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -20,8 +21,13 @@
     <article>
       <section>
         <h3>Questão 12</h3>
-        <p><b>Enunciado</b></p>
-        <p>Resposta</p>
+        <p><b>Repita o exercício anterior adicionando o conteúdo da caixa de texto em um elemento de um select.</b></p>
+        <input type="text" id="texto" placeholder="Digite algo">
+        <button onclick="adicionarItem()"> Adicionar </button>
+
+        <select id="listaSelect">
+          <option value="" disabled selected> Escolha uma opção... </option>
+        </select>
       </section>
     </article>
   </main>
